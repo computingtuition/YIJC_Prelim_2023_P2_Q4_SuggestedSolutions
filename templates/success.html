@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Taxi Rental Database</title>
+</head>
+<body>
+    <h1>Rental Successful</h1>
+    <h2>Current Rental Records</h2>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Vehicle Model</th>
+            <th>Rental</th>
+            <th>Paid</th>
+        </tr>
+        {% for rental in rentals %}
+        <tr>
+            <td>{{ rental[0] }}</td>
+            <td>{{ rental[1] }}</td>
+            <td>{{ rental[2] }}</td>
+            <td>{{ rental[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p>Outstanding amount of rental owed: ${{ owed }}</p>
+
+    <!-- link back to main menu -->
+    <p><a href="/">Main Menu</a></p>
+</body>
+</html>

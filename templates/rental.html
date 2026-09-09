@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Taxi Rental Database</title>
+</head>
+<body>
+    <h1>Taxi Rental:</h1>
+    <fieldset>
+        <legend>Details:</legend>
+        <!-- form action route is dictated in Task 4.4 -->
+        <form action="/rental" method="POST">
+            <p>Driver ID: <input name="driverID" value="{{ driver[0] }}"></p>
+            <p>Driver Name: {{ driver[1] }}</p>
+            <p>Date of Rental: <input name="rentalDate" type="date"></p>
+            <p>Vehicle:
+                <select name="vehicle">
+                    <option value="">Please select</option>
+                    {% for i in range(vehicles|length) %}
+                        <option value="{{ vehicles[i][0] }}">{{ i+1 }}. {{ vehicles[i][0] }}, {{ vehicles[i][1] }}, ({{ vehicles[i][2] }} Passengers)</option>
+                    {% endfor %}
+                </select>
+                </p>
+            <p><input type="submit"</p>
+        </form>
+    </fieldset>
+
+    <!-- link back to main menu -->
+    <p><a href="/">Main Menu</a></p>
+</body>
+</html>

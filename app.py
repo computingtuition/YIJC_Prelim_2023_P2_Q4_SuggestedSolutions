@@ -113,7 +113,7 @@ def menu():
         
   
 
-# this is only for running on repl.it
+# this is only for deployment on Google Cloud (so that you can preview online)
 app.run('0.0.0.0', port=8080)
 
 # for running on own computer, use this
